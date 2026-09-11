@@ -20,7 +20,7 @@ This final phase prepares the application for production use and mobile installa
 - "Next Picklist" shortcut.
 
 ### [Integration] Finalization
-The transition of the `Picklist` status to `PICKLIST_PICKED` is handled automatically in the backend by the existing SECA engine when all items are successfully recorded via `POST /rest/services/recordPick`. If any manual status update or override is required, the standard `POST /rest/services/updatePicklist` endpoint can be used.
+The transition of the `Picklist` status to `PICKLIST_PICKED` is handled automatically in the backend by the existing SECA engine when all items are successfully recorded via `POST /rest/services/setPicklistItemToComplete`. (Note: The standard `updatePicklist` service is not exposed as a JAX-RS REST endpoint; status updates occur automatically through SECAs, and cancellation transitions are handled via the exposed `cancelPickingPicklist` endpoint).
 
 ## Verification Plan
 
